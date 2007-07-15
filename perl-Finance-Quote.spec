@@ -1,18 +1,19 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Finance
 %define		pnam	Quote
 Summary:	Finance::Quote - Get stock and mutual fund quotes from various exchanges
+Summary(pl.UTF-8):	Finance::Quote - Pobieranie notowań giełdowych i funduszy powierniczych
 Name:		perl-Finance-Quote
 Version:	1.13
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Finance/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	3619ccb3fb09ed9eebe1941e6cf361c9
 URL:		http://search.cpan.org/dist/Finance-Quote/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -20,21 +21,18 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module gets stock quotes from various internet sources, including
-Yahoo! Finance, Fidelity Investments, and the Australian Stock Exchange.
-There are two methods of using this module -- a functional interface
-that is depreciated, and an object-orientated method that provides
-greater flexibility and stability.
+This module gets stock quotes from various Internet sources, including
+Yahoo! Finance, Fidelity Investments, and the Australian Stock
+Exchange. There are two methods of using this module - a functional
+interface that is depreciated, and an object-orientated method that
+provides greater flexibility and stability.
 
-With the exception of straight currency exchange rates, all information
-is returned as a two-dimensional hash (or a reference to such a hash,
-if called in a scalar context).  For example:
-
-    %info = $q->fetch("australia","CML");
-    print "The price of CML is ".$info{"CML","price"};
-
-The first part of the hash (eg, "CML") is referred to as the stock.
-The second part (in this case, "price") is referred to as the label.
+%description -l pl.UTF-8
+Ten moduł pobiera notowania giełdowe z różnych źródeł w Internecie, w
+tym z Yahoo! Finance, Fidelity Investments i Australian Stock Exchange
+(giełdy australijskiej). Istnieją dwie metody użycia tego modułu -
+przestarzały interfejs funkcyjny i zorientowana obiektowo metoda
+dająca większą elastyczność i stabilność.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
