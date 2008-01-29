@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%dir %{perl_vendorlib}/Finance
 %{perl_vendorlib}/Finance/*.pm
 %dir %{perl_vendorlib}/Finance/Quote
 %{perl_vendorlib}/Finance/Quote/*.pm
