@@ -8,12 +8,12 @@
 Summary:	Finance::Quote - Get stock and mutual fund quotes from various exchanges
 Summary(pl.UTF-8):	Finance::Quote - Pobieranie notowań giełdowych i funduszy powierniczych
 Name:		perl-Finance-Quote
-Version:	1.16
+Version:	1.17
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Finance/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	079f20db2a100f63fa03e29beb1e9939
+# Source0-md5:	446dba3837ffa395bffdea268824e0c1
 URL:		http://search.cpan.org/dist/Finance-Quote/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
