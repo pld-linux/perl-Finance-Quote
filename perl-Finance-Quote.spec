@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Finance
 %define		pnam	Quote
 Summary:	Finance::Quote - Get stock and mutual fund quotes from various exchanges
